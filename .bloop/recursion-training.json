@@ -1,0 +1,281 @@
+{
+    "version" : "1.1.2",
+    "project" : {
+        "name" : "recursion-training",
+        "directory" : "/Users/afsalthaj/github/recursion-training",
+        "sources" : [
+            "/Users/afsalthaj/github/recursion-training/src/main/scala-2.12",
+            "/Users/afsalthaj/github/recursion-training/src/main/scala",
+            "/Users/afsalthaj/github/recursion-training/src/main/java",
+            "/Users/afsalthaj/github/recursion-training/target/scala-2.12/src_managed/main"
+        ],
+        "dependencies" : [
+        ],
+        "classpath" : [
+            "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-core_2.12/7.2.16/scalaz-core_2.12-7.2.16.jar",
+            "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/slamdata/slamdata-predef_2.12/0.0.2/slamdata-predef_2.12-0.0.2.jar",
+            "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar",
+            "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/slamdata/matryoshka-core_2.12/0.18.3/matryoshka-core_2.12-0.18.3.jar",
+            "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.jar",
+            "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/scala-library/2.12.1/scala-library-2.12.1.jar",
+            "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/julien-truffaut/monocle-core_2.12/1.4.0/monocle-core_2.12-1.4.0.jar",
+            "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/mpilquist/simulacrum_2.12/0.10.0/simulacrum_2.12-0.10.0.jar"
+        ],
+        "out" : "/Users/afsalthaj/github/recursion-training/.bloop/recursion-training",
+        "classesDir" : "/Users/afsalthaj/github/recursion-training/.bloop/recursion-training/scala-2.12/classes",
+        "resources" : [
+            "/Users/afsalthaj/github/recursion-training/src/main/resources",
+            "/Users/afsalthaj/github/recursion-training/target/scala-2.12/resource_managed/main"
+        ],
+        "scala" : {
+            "organization" : "org.scala-lang",
+            "name" : "scala-compiler",
+            "version" : "2.12.4",
+            "options" : [
+                "-deprecation",
+                "-encoding",
+                "UTF-8",
+                "-explaintypes",
+                "-language:existentials",
+                "-language:higherKinds",
+                "-language:experimental.macros",
+                "-language:implicitConversions",
+                "-language:postfixOps",
+                "-Xfuture",
+                "-Yno-adapted-args",
+                "-Ypartial-unification",
+                "-P:splain:all:true",
+                "-P:clippy:colors=true",
+                "-P:splain:all:true",
+                "-Ypartial-unification",
+                "-P:clippy:colors=true",
+                "-Xplugin:/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/tryp/splain_2.12.4/0.2.10/splain_2.12.4-0.2.10.jar",
+                "-Xplugin:/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/clippy/plugin_2.12/0.5.3/plugin_2.12-0.5.3-bundle.jar",
+                "-Xplugin:/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/spire-math/kind-projector_2.12/0.9.6/kind-projector_2.12-0.9.6.jar"
+            ],
+            "jars" : [
+                "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.4/scala-compiler-2.12.4.jar",
+                "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.4/scala-reflect-2.12.4.jar",
+                "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/jline/jline/2.14.5/jline-2.14.5.jar",
+                "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.jar",
+                "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6.jar"
+            ],
+            "setup" : {
+                "order" : "mixed",
+                "addLibraryToBootClasspath" : true,
+                "addCompilerToClasspath" : false,
+                "addExtraJarsToClasspath" : false,
+                "manageBootClasspath" : true,
+                "filterLibraryFromClasspath" : true
+            }
+        },
+        "java" : {
+            "options" : [
+            ]
+        },
+        "test" : {
+            "frameworks" : [
+                {
+                    "names" : [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names" : [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                }
+            ],
+            "options" : {
+                "excludes" : [
+                ],
+                "arguments" : [
+                ]
+            }
+        },
+        "platform" : {
+            "name" : "jvm",
+            "config" : {
+                "home" : "/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre",
+                "options" : [
+                ]
+            },
+            "mainClass" : [
+            ]
+        },
+        "resolution" : {
+            "modules" : [
+                {
+                    "organization" : "org.scala-lang",
+                    "name" : "scala-library",
+                    "version" : "2.12.4",
+                    "configurations" : "default",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-library",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.jar"
+                        },
+                        {
+                            "name" : "scala-library",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.scalaz",
+                    "name" : "scalaz-core_2.12",
+                    "version" : "7.2.16",
+                    "configurations" : "default",
+                    "artifacts" : [
+                        {
+                            "name" : "scalaz-core_2.12",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-core_2.12/7.2.16/scalaz-core_2.12-7.2.16.jar"
+                        },
+                        {
+                            "name" : "scalaz-core_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalaz/scalaz-core_2.12/7.2.16/scalaz-core_2.12-7.2.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "com.slamdata",
+                    "name" : "slamdata-predef_2.12",
+                    "version" : "0.0.2",
+                    "configurations" : "default",
+                    "artifacts" : [
+                        {
+                            "name" : "slamdata-predef_2.12",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/slamdata/slamdata-predef_2.12/0.0.2/slamdata-predef_2.12-0.0.2.jar"
+                        },
+                        {
+                            "name" : "slamdata-predef_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/slamdata/slamdata-predef_2.12/0.0.2/slamdata-predef_2.12-0.0.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.typelevel",
+                    "name" : "macro-compat_2.12",
+                    "version" : "1.1.1",
+                    "configurations" : "default",
+                    "artifacts" : [
+                        {
+                            "name" : "macro-compat_2.12",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar"
+                        },
+                        {
+                            "name" : "macro-compat_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "com.slamdata",
+                    "name" : "matryoshka-core_2.12",
+                    "version" : "0.18.3",
+                    "configurations" : "default",
+                    "artifacts" : [
+                        {
+                            "name" : "matryoshka-core_2.12",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/slamdata/matryoshka-core_2.12/0.18.3/matryoshka-core_2.12-0.18.3.jar"
+                        },
+                        {
+                            "name" : "matryoshka-core_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/slamdata/matryoshka-core_2.12/0.18.3/matryoshka-core_2.12-0.18.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.typelevel",
+                    "name" : "scala-library",
+                    "version" : "2.12.1",
+                    "configurations" : "default",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-library",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/scala-library/2.12.1/scala-library-2.12.1.jar"
+                        },
+                        {
+                            "name" : "scala-library",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/scala-library/2.12.1/scala-library-2.12.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "com.github.julien-truffaut",
+                    "name" : "monocle-core_2.12",
+                    "version" : "1.4.0",
+                    "configurations" : "default",
+                    "artifacts" : [
+                        {
+                            "name" : "monocle-core_2.12",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/julien-truffaut/monocle-core_2.12/1.4.0/monocle-core_2.12-1.4.0.jar"
+                        },
+                        {
+                            "name" : "monocle-core_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/julien-truffaut/monocle-core_2.12/1.4.0/monocle-core_2.12-1.4.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "com.github.mpilquist",
+                    "name" : "simulacrum_2.12",
+                    "version" : "0.10.0",
+                    "configurations" : "default",
+                    "artifacts" : [
+                        {
+                            "name" : "simulacrum_2.12",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/mpilquist/simulacrum_2.12/0.10.0/simulacrum_2.12-0.10.0.jar"
+                        },
+                        {
+                            "name" : "simulacrum_2.12",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/mpilquist/simulacrum_2.12/0.10.0/simulacrum_2.12-0.10.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization" : "org.scala-lang",
+                    "name" : "scala-library",
+                    "version" : "2.12.4",
+                    "configurations" : "optional",
+                    "artifacts" : [
+                        {
+                            "name" : "scala-library",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.jar"
+                        },
+                        {
+                            "name" : "scala-library",
+                            "classifier" : "sources",
+                            "path" : "/Users/afsalthaj/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -2,6 +2,9 @@ package training.recursion.ex03
 
 import scalaz._
 import Scalaz._
+import matryoshka.data._
+import matryoshka._
+import matryoshka.implicits._
 
 // -------------------- the DSL --------------------
 sealed trait Expr[A]
@@ -12,13 +15,17 @@ case class Sum[A](a: A, b: A)      extends Expr[A]
 case class Multiply[A](a: A, b: A) extends Expr[A]
 case class Divide[A](a: A, b: A)   extends Expr[A]
 case class Square[A](a: A)         extends Expr[A]
+
 // -------------------------------------------------
 
 object Ex03_Catamorphism extends App with Ex03_Traverse {
 
-  import matryoshka.data._
-  import matryoshka._
-  import matryoshka.implicits._
+  def int(v: Int): Fix[Expr]                     = IntValue[Fix[Expr]](v).embed
+  def dec(v: Double): Fix[Expr]                  = DecValue[Fix[Expr]](v).embed
+  def sum(a: Fix[Expr], b: Fix[Expr]): Fix[Expr] = Sum[Fix[Expr]](a, b).embed
+  def mul(a: Fix[Expr], b: Fix[Expr]): Fix[Expr] = Multiply[Fix[Expr]](a, b).embed
+  def div(a: Fix[Expr], b: Fix[Expr]): Fix[Expr] = Divide[Fix[Expr]](a, b).embed
+  def square(a: Fix[Expr]): Fix[Expr]            = Square[Fix[Expr]](a).embed
 
   // a set of rules
   def evalToDouble(expr: Expr[Double]): Double = expr match {
@@ -55,7 +62,14 @@ object Ex03_Catamorphism extends App with Ex03_Traverse {
   val fixedDivision: Fix[Expr] = ??? // TODO use .embed
 
   // optimization
-  def optimizeSqr(expr: Fix[Expr]): Fix[Expr] = ??? // TODO (use .project and .embed)
+  def optimizeSqr(expr: Fix[Expr]): Fix[Expr] = expr.project match {
+    case IntValue(v)    => int(v)
+    case DecValue(v)    => dec(v)
+    case Sum(a, b)      => sum(a, b)
+    case Multiply(a, b) => if (a == b) square(a) else mul(a, b)
+    case Square(a)      => square(a)
+    case Divide(a, b)   => div(a, b)
+  } // TODO (use .project and .embed)
 
   // how to apply this function?
   // transCataT
